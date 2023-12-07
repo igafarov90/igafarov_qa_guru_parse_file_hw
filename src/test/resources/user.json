@@ -1,0 +1,11 @@
+{
+  "email": "igafarov@dtln.ru",
+  "full_name": "Гафаров Ильгиз",
+  "login": "igafarov",
+  "sup_acl": {
+      "roles": [
+      "admin",
+      "operator"
+    ]
+  }
+}
