@@ -11,6 +11,7 @@ import utils.FileExtractor;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,7 +27,7 @@ public class FileParsingTest extends TestData {
 
         byte[] fileContent = fileExtractor.extractZipFile(archiveName, csvFile);
         CSVReader csvReader = new CSVReader(new InputStreamReader(
-                new ByteArrayInputStream(fileContent)));
+                new ByteArrayInputStream(fileContent), StandardCharsets.UTF_8));
 
         assertThat(csvReader.readAll().get(0)).isEqualTo(
                 new String[]{csvFirstRow});
