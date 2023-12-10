@@ -55,7 +55,7 @@ public class FileParsingTest extends TestData {
         String lastName = xls.excel.getSheetAt(0).getRow(2)
                 .getCell(2).getStringCellValue();
         String date = String.valueOf(xls.excel.getSheetAt(0).getRow(2)
-                .getCell(6).getDateCellValue());
+                .getCell(6).getLocalDateTimeCellValue());
 
         assertThat(firstName).isEqualTo(userName);
         assertThat(lastName).isEqualTo(userSecondName);
